@@ -1,0 +1,29 @@
+Quick Notes: npm, Git & GitHub
+1. npm Basics
+npm init -y → Creates package.json (project config).
+
+npm i express → Installs Express (adds to dependencies).
+
+2. SemVer (Versioning)
+Format: major.minor.patch (e.g., 5.1.0).
+
+Major: Breaking changes.
+
+Minor: New features (back-compatible).
+
+Patch: Bug fixes.
+
+3. GitHub Basics
+Repo: Project folder on GitHub.
+
+Commands:
+
+bash
+Copy
+git clone <url>      # Download repo  
+git add .            # Stage changes  
+git commit -m "msg"  # Save changes  
+git push             # Upload to GitHub  
+git pull             # Download updates  
+4. .gitignore
+Ignores files (e.g., node_modules/, .env).
