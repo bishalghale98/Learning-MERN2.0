@@ -22,7 +22,7 @@ This project is part of the journey to master the MERN stack by building real-wo
 ## Setup
 1. Clone the repository:
     ```bash
-    git clone https://github.com/bishal-ghale98/learning-mern-2.0.git
+    git clone https://github.com/bishalghale98/Learning-MERN2.0.git
     ```
 2. Install dependencies:
     ```bash
