@@ -1,29 +1,123 @@
-Quick Notes: npm, Git & GitHub
-1. npm Basics
-npm init -y → Creates package.json (project config).
+==============================
+ Day 4 - MERN Stack Learning
+==============================
 
-npm i express → Installs Express (adds to dependencies).
 
-2. SemVer (Versioning)
-Format: major.minor.patch (e.g., 5.1.0).
+-----------------------
+1. npm – Basics
+-----------------------
 
-Major: Breaking changes.
+What is npm?
+------------
+npm (Node Package Manager) is used to manage dependencies 
+(libraries/packages) in Node.js projects.
 
-Minor: New features (back-compatible).
+Useful Commands:
+----------------
+npm init -y          
+→ Quickly creates a default package.json file (project config)
 
-Patch: Bug fixes.
+npm install express  
+→ Installs Express.js and adds it to dependencies
 
-3. GitHub Basics
-Repo: Project folder on GitHub.
 
-Commands:
+----------------------------
+2. Semantic Versioning (SemVer)
+----------------------------
 
-bash
-Copy
-git clone <url>      # Download repo  
-git add .            # Stage changes  
-git commit -m "msg"  # Save changes  
-git push             # Upload to GitHub  
-git pull             # Download updates  
-4. .gitignore
-Ignores files (e.g., node_modules/, .env).
+Version Format: major.minor.patch
+Example: 5.1.0
+
+- Major: Breaking changes
+- Minor: New features (backward-compatible)
+- Patch: Bug fixes and minor improvements
+
+
+---------------------------
+3. Git & GitHub – Basics
+---------------------------
+
+What is GitHub?
+---------------
+GitHub is a cloud-based platform to host and manage code 
+using Git version control.
+
+Basic Git Commands:
+-------------------
+git clone <url>       → Download a remote GitHub repository  
+git add .             → Stage all changes  
+git commit -m "msg"   → Commit changes with a message  
+git push              → Upload changes to GitHub  
+git pull              → Get updates from GitHub
+
+.gitignore:
+-----------
+Used to ignore files/folders from being pushed to GitHub  
+Example: `node_modules/`, `.env`
+
+
+---------------------------------
+4. Nodemon – Auto Restart Server
+---------------------------------
+
+What is Nodemon?
+-----------------
+Nodemon automatically restarts the server when code changes are detected.  
+Great for development.
+
+Installation:
+-------------
+npm install nodemon --save-dev
+
+Update package.json:
+---------------------
+"scripts": {
+  "start": "nodemon app.js"
+}
+
+Alternative without nodemon:
+-----------------------------
+node --watch app.js
+
+
+-------------------------------
+5. JSON – JavaScript Object Notation
+-------------------------------
+
+What is JSON?
+-------------
+JSON is a lightweight data format used for storing and 
+exchanging data between a client and a server.
+
+Why is JSON Used?
+------------------
+- Easily readable and writable
+- Converts easily to JavaScript objects
+- Language-independent
+- Common format in REST APIs
+
+Use in Web Development:
+------------------------
+- Transfer data between frontend and backend
+- Works perfectly with JavaScript and most modern frameworks
+
+
+----------------------------
+6. MongoDB – Connecting to the Database
+----------------------------
+
+MongoDB Connection URI:
+------------------------
+mongodb://leoyoung790:j7Dr2Y1POY2HN6Eo@ac-rewlnkc-shard-00-00.zrfoxbz.mongodb.net:27017,
+ac-rewlnkc-shard-00-01.zrfoxbz.mongodb.net:27017,
+ac-rewlnkc-shard-00-02.zrfoxbz.mongodb.net:27017/
+?replicaSet=atlas-mnb3a4-shard-0&ssl=true&authSource=admin&retryWrites=true&w=majority&appName=Cluster0
+
+⚠️  Security Note:
+------------------
+Never hard-code real credentials in your source code.  
+Use environment variables and a `.env` file to keep credentials safe.
+
+CRUD Using 
+
+
