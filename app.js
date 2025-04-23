@@ -6,6 +6,13 @@ const fs = require("fs");
 
 const ConnectToDatabase = require("./database/index");
 const Book = require("./model/bookModel");
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 ConnectToDatabase();
 
@@ -44,6 +51,7 @@ app.post("/book", upload.single("image"), async (req, res) => {
     publishedAt,
     publication,
   } = req.body;
+
   await Book.create({
     bookName,
     bookPrice,
@@ -51,11 +59,12 @@ app.post("/book", upload.single("image"), async (req, res) => {
     authorName,
     publishedAt,
     publication,
-    imagePath: req.file ?? "http://localhost:3000/" + req.file.filename,
+    imagePath: "http://localhost:3000/" + req.file.filename, // ✅ Only the URL string
   });
+
   res.status(200).json({
     success: true,
-    Message: "Upload Successfully",
+    message: "Upload Successfully",
   });
 });
 
