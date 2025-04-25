@@ -59,7 +59,7 @@ app.post("/book", upload.single("image"), async (req, res) => {
     authorName,
     publishedAt,
     publication,
-    imagePath: "http://localhost:3000/" + req.file.filename, // ✅ Only the URL string
+    imagePath: "https://learning-mern2-0.onrender.com/" + req.file.filename, // ✅ Only the URL string
   });
 
   res.status(200).json({
@@ -109,7 +109,8 @@ app.patch("/book/:id", upload.single("image"), async (req, res) => {
   if (req.file) {
     const oldImagePath = oldDates?.imagePath;
     if (oldImagePath) {
-      const localHostUrlLength = "http://localhost:3000/".length;
+      const localHostUrlLength = "https://learning-mern2-0.onrender.com/"
+        .length;
 
       const newOldImagePath = oldImagePath.slice(localHostUrlLength);
       fs.unlink(`./storage/${newOldImagePath}`, (err) => {
@@ -135,7 +136,7 @@ app.patch("/book/:id", upload.single("image"), async (req, res) => {
     publishedAt,
     publication,
     imagePath: req.file
-      ? "http://localhost:3000/" + req.file.filename
+      ? "https://learning-mern2-0.onrender.com/" + req.file.filename
       : oldDates.imagePath, // Save the file path if needed
   });
   res.status(200).json({
